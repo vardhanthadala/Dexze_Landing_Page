@@ -909,10 +909,14 @@
                 ${paginationSectionHTML}
             `;
             
+            // Start entrance animation immediately to prevent visual flashing
+            if (typeof gsap !== 'undefined') {
+                gsap.fromTo(container, {y: 50, opacity: 0}, {y: 0, opacity: 1, duration: 1, ease: "power3.out"});
+            }
+            
             // Wait for images to load before creating GSAP pins so height calculations are correct
             setTimeout(() => {
                 if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
-                    gsap.fromTo(container, {y: 50, opacity: 0}, {y: 0, opacity: 1, duration: 1, ease: "power3.out"});
                     
                     // Use GSAP matchMedia to ONLY pin text on desktop (screens >= 768px)
                     let mm = gsap.matchMedia();
