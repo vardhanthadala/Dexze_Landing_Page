@@ -94,12 +94,25 @@
             letter-spacing: -1px;
             margin-bottom: 0.5rem;
             line-height: 1;
+            transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), color 0.5s ease;
         }
 
         .work-content p {
             font-size: clamp(0.8rem, 0.9vw, 1rem);
             color: #1f1f1f;
             line-height: 1.3;
+            transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.5s ease;
+        }
+
+        /* Hover effect on card applies to texts */
+        .work-card:hover .work-content h2 {
+            transform: translateX(10px);
+            color: #555;
+        }
+
+        .work-card:hover .work-content p {
+            transform: translateX(10px);
+            opacity: 0.7;
         }
 
         /* MOBILE */
@@ -290,7 +303,7 @@
 
                         <!-- LEFT -->
                         <div class="parallax-wrap-left">
-                            <div class="work-card tilt-left">
+                            <div class="work-card tilt-left" onclick="window.location.href='project.html?id=nertik'" style="cursor: pointer;">
 
                                 <div class="work-image-wrap">
                                     <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
@@ -307,7 +320,7 @@
 
                         <!-- RIGHT -->
                         <div class="parallax-wrap-right">
-                            <div class="work-card tilt-right">
+                            <div class="work-card tilt-right" onclick="window.location.href='project.html?id=avatr'" style="cursor: pointer;">
 
                                 <div class="work-image-wrap">
                                     <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?auto=format&fit=crop&w=1200&q=80"
@@ -325,7 +338,7 @@
 
                         <!-- CARD 3 (LEFT) -->
                         <div class="parallax-wrap-left">
-                            <div class="work-card tilt-left">
+                            <div class="work-card tilt-left" onclick="window.location.href='project.html?id=lumina'" style="cursor: pointer;">
                                 <div class="work-image-wrap">
                                     <img src="https://images.unsplash.com/photo-1542204165-65bf26472b9b?auto=format&fit=crop&w=1200&q=80" alt="">
                                 </div>
@@ -338,7 +351,7 @@
 
                         <!-- CARD 4 (RIGHT) -->
                         <div class="parallax-wrap-right">
-                            <div class="work-card tilt-right">
+                            <div class="work-card tilt-right" onclick="window.location.href='project.html?id=elevate'" style="cursor: pointer;">
                                 <div class="work-image-wrap">
                                     <img src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=1200&q=80" alt="">
                                 </div>
@@ -351,7 +364,7 @@
 
                         <!-- CARD 5 (LEFT) -->
                         <div class="parallax-wrap-left">
-                            <div class="work-card tilt-left">
+                            <div class="work-card tilt-left" onclick="window.location.href='project.html?id=nexus'" style="cursor: pointer;">
                                 <div class="work-image-wrap">
                                     <img src="https://images.unsplash.com/photo-1550684848-fac1c5b4e853?auto=format&fit=crop&w=1200&q=80" alt="">
                                 </div>
@@ -364,7 +377,7 @@
 
                         <!-- CARD 6 (RIGHT) -->
                         <div class="parallax-wrap-right">
-                            <div class="work-card tilt-right">
+                            <div class="work-card tilt-right" onclick="window.location.href='project.html?id=verdant'" style="cursor: pointer;">
                                 <div class="work-image-wrap">
                                     <img src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=1200&q=80" alt="">
                                 </div>
@@ -377,7 +390,7 @@
 
                         <!-- CARD 7 (LEFT) -->
                         <div class="parallax-wrap-left">
-                            <div class="work-card tilt-left">
+                            <div class="work-card tilt-left" onclick="window.location.href='project.html?id=circuit'" style="cursor: pointer;">
                                 <div class="work-image-wrap">
                                     <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80" alt="">
                                 </div>
@@ -390,7 +403,7 @@
 
                         <!-- CARD 8 (RIGHT) -->
                         <div class="parallax-wrap-right">
-                            <div class="work-card tilt-right">
+                            <div class="work-card tilt-right" onclick="window.location.href='project.html?id=aura'" style="cursor: pointer;">
                                 <div class="work-image-wrap">
                                     <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=80" alt="">
                                 </div>
@@ -403,7 +416,7 @@
 
                         <!-- CARD 9 (LEFT) -->
                         <div class="parallax-wrap-left">
-                            <div class="work-card tilt-left">
+                            <div class="work-card tilt-left" onclick="window.location.href='project.html?id=canvas'" style="cursor: pointer;">
                                 <div class="work-image-wrap">
                                     <img src="https://images.unsplash.com/photo-1541701494587-cb58502866ab?auto=format&fit=crop&w=1200&q=80" alt="">
                                 </div>
@@ -416,7 +429,7 @@
 
                         <!-- CARD 10 (RIGHT) -->
                         <div class="parallax-wrap-right">
-                            <div class="work-card tilt-right">
+                            <div class="work-card tilt-right" onclick="window.location.href='project.html?id=synergy'" style="cursor: pointer;">
                                 <div class="work-image-wrap">
                                     <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=1200&q=80" alt="">
                                 </div>
@@ -590,6 +603,21 @@
                     start: "top bottom", end: "bottom top", scrub: 3
                 }
             });
+        });
+
+        // TEXT ENTRANCE ANIMATION (Staggered fade-up)
+        gsap.utils.toArray(".work-card").forEach(card => {
+            let texts = card.querySelectorAll(".work-content h2, .work-content p");
+            gsap.fromTo(texts, 
+                { y: 30, opacity: 0 },
+                { y: 0, opacity: 1, duration: 1.5, stagger: 0.15, ease: "power3.out", 
+                  scrollTrigger: {
+                      trigger: card,
+                      start: "top 85%",
+                      toggleActions: "play none none none"
+                  }
+                }
+            );
         });
 
         gsap.utils.toArray(".work-image-wrap img").forEach(img => {
